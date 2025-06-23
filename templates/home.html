@@ -1,35 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Home</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-  <style>
-    body {
-      background-color: #111;
-      color: white;
-      text-align: center;
-      margin-top: 100px;
-      font-family: sans-serif;
-    }
-    .logout-btn {
-      padding: 0.5em 2em;
-      border-radius: 5px;
-      border: none;
-      background-color: #252525;
-      color: white;
-      transition: 0.3s;
-    }
-    .logout-btn:hover {
-      background-color: red;
-      cursor: pointer;
-    }
-  </style>
 </head>
 <body>
-  <h2>Welcome, {{ username }}!</h2>
+  <h1>Welcome, {{ username }}!</h1>
   <form method="POST" action="{{ url_for('logout') }}">
-    <button class="logout-btn" type="submit">Logout</button>
+    <button type="submit">Logout</button>
   </form>
 </body>
 </html>
